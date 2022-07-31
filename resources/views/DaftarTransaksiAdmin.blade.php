@@ -1,8 +1,8 @@
-@extends('masterlogin')
-@section('titlelogin')
+@extends('masteradmin')
+@section('titleadmin')
 Toko Roti
 @endsection
-@section('kontenlogin')
+@section('kontenadmin')
 
 <?php
 use Illuminate\Support\Facades\DB;
@@ -27,10 +27,8 @@ use Illuminate\Support\Facades\DB;
                     <th scope="col">Catatan Pembeli</th>
                     <th scope="col">Jumlah Bayar</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Jenis Pembayaran</th>
-                    <th scope="col">Biaya Admin</th>
-                    <th scope="col">Sub Total Akhir</th>
                     <th scope="col">Tanggal Transaksi</th>
+                    <th scope="col">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -39,7 +37,7 @@ use Illuminate\Support\Facades\DB;
                 <!-- <td></td>	 -->
                 <td>{{ $TJ->id_transaksi_penjualan }}</td>
 			    <td>{{ $TJ->nama_pembeli }}</td>
-			    <td>
+                <td>
                 <?php
                 $namakue = DB::table('produk')->where('id_produk', $TJ->nama_produk)->value('nama_produk');
                 if($namakue != null){
@@ -63,13 +61,14 @@ use Illuminate\Support\Facades\DB;
                 </td>
                 <td>Rp.{{ $TJ->bayar_produk }}</td>
                 <td>{{ $TJ->status_penjualan }}</td>
-                <td>{{ $TJ->jenis_bayar }}</td>
-                <td>{{ $TJ->biaya_admin }}</td>
-                <td>{{ $TJ->sub_total_akhir }}</td>
                 <td>{{ $TJ->created_at }}</td>
-			    <!-- <td>
+                <td>
+                    <button type="button" class="btn btn-success"><a href="/daftartransaksipenjualan/proses/{{ $TJ->id_transaksi_penjualan }}">Proses</a> </button>
+                    <button type="button" class="btn btn-success"><a href="/daftartransaksipenjualan/tolak/{{ $TJ->id_transaksi_penjualan }}">Ditolak</a> </button>
+			    <!-- </td>
+			    <td> -->
                     <button type="button" class="btn btn-danger"><a href="/order/hapuspenjualan/{{ $TJ->id_transaksi_penjualan }}">Cancel</a> </button>
-			    </td> -->
+			    </td>
 		    </tr>
 		    @endforeach
             </tbody>

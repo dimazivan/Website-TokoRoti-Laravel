@@ -1,8 +1,8 @@
-@extends('master')
-@section('title')
+@extends('masteradmin')
+@section('titleadmin')
 Toko Roti
-@endsection('title')
-@section('konten')
+@endsection('titleadmin')
+@section('kontenadmin')
 <!-- ======= Intro Section ======= -->
 <section id="intro" style="margin-top: -23px;">
   <div class="intro-container">

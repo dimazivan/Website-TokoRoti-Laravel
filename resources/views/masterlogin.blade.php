@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>@yield('titleadmin')</title>
+    <title>@yield('titlelogin')</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -43,38 +43,17 @@
 
                     <nav class="nav-menu d-none d-lg-block">
                         <ul>
-                            <li class="active"><a href="/indexadmin">Home</a></li>
-                            <li class="drop-down"><a href="#">User</a>
+                            <li class="active"><a href="/indexlogin">Home</a></li>
+                            <li><a href="/menulogin">Products</a></li>
+                            <li><a href="/orderlogin">Order Now</a></li>
+                            <li><a href="/daftartransaksilogin">Daftar Transaksi</a></li>
+                            <!-- <li><a href="/#team">Team</a></li> -->
+                            <li class="drop-down"><a href="#">About Us</a>
                                 <ul>
-                                    <li><a href="/formuser">Form User</a></li>
-                                    <li><a href="/daftarlistuser">Daftar User</a></li>
-                                </ul>
-                            </li>
-                            <li class="drop-down"><a href="#">Supplier</a>
-                                <ul>    
-                                    <li><a href="/formsupplier">Form Supplier</a></li>
-                                    <li><a href="/daftarlistsupplier">Daftar Supplier</a></li>
-                                </ul>
-                            </li>
-                            <li class="drop-down"><a href="#">Bahan</a>
-                                <ul>    
-                                    <li><a href="/formbahan">Form Bahan</a></li>
-                                    <!-- <li><a href="/orderbahan">Beli Bahan</a></li> -->
-                                    <li><a href="/daftarlistbahan">Daftar Bahan</a></li>
-                                </ul>
-                            </li>
-                            <li class="drop-down"><a href="#">Produk</a>
-                                <ul>    
-                                    <li><a href="/formproduk">Form Produk</a></li>
-                                    <li><a href="/daftarlistproduk">Daftar Produk</a></li>
-                                </ul>
-                            </li>
-                            <li class="drop-down"><a href="#">Daftar Transaksi</a>
-                                <ul>
-                                    <!-- <li><a href="">History Transaksi</a></li> -->
-                                    <li><a href="/daftartransaksipembelian">Transaksi Pembelian</a></li>
-                                    <li><a href="/daftartransaksipenjualan">Transaksi Penjualan</a></li>
-                                    <li><a href="/profit">Keuntungan</a></li>
+                                    <li><a href="/aboutlogin#aboutus">About</a></li>
+                                    <li><a href="/aboutlogin#team">Our Team</a></li>
+                                    <li><a href="/aboutlogin#contact">Contact</a></li>
+                                    <li><a href="/aboutlogin#feedback">Feedback</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Log Out</a></li>
@@ -87,7 +66,7 @@
     </header><!-- End Header -->
     <br>
     {{-- <!-- <h2>@yield('judul_halaman')</h2> --> --}}
-    @yield('kontenadmin')
+    @yield('kontenlogin')
     <br>
     <!-- Footer -->
     <footer id="footer" class="bottom">

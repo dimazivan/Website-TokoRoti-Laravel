@@ -45,7 +45,7 @@
                         <ul>
                             <li class="active"><a href="/">Home</a></li>
                             <li><a href="/menu">Products</a></li>
-                            <li><a href="/order">Order Now</a></li>
+                            <!-- <li><a href="/order">Order Now</a></li> -->
                             <li><a href="/daftartransaksi">Daftar Transaksi</a></li>
                             <!-- <li><a href="/#team">Team</a></li> -->
                             <li class="drop-down"><a href="#">About Us</a>
@@ -142,11 +142,12 @@
     <!-- Uncomment below i you want to use a preloader -->
     <!-- <div id="preloader"></div> -->
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <!-- Vendor JS Files -->
     <script src="<?php echo url('/'); ?>/vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo url('/'); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?php echo url('/'); ?>/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="<?php echo url('/'); ?>/vendor/php-email-form/validate.js"></script>
+    <!-- <script src="<?php echo url('/'); ?>/vendor/php-email-form/validate.js"></script> -->
     <script src="<?php echo url('/'); ?>/vendor/waypoints/jquery.waypoints.min.js"></script>
     <script src="<?php echo url('/'); ?>/vendor/counterup/counterup.min.js"></script>
     <script src="<?php echo url('/'); ?>/vendor/isotope-layout/isotope.pkgd.min.js"></script>

@@ -1,17 +1,17 @@
-@extends('master')
-@section('title')
-Daftar Disini
+@extends('masteradmin')
+@section('titleadmin')
+Daftar User
 @endsection
-@section('konten')
+@section('kontenadmin')
 
 <section id="contact" class="section-bg" style="margin-top: 50px;">
   <div class="container" data-aos="fade-up">
     <header class="section-header">
-      <h3 class="section-title">Register Form</h3>
+      <h3 class="section-title">Daftar User Login</h3>
     </header>
 
     <div class="form">
-      <form action="{{ route('store.daftar') }}" method="post" class="php-email-form">
+      <form action="{{ route('store.daftaradmin') }}" method="post" class="php-email-form">
         @csrf
         <!-- {{ csrf_field() }} -->
         <div class="form-group">
@@ -31,29 +31,30 @@ Daftar Disini
           <input type="password" class="form-control" name="kata_sandi" id="kata_sandi" placeholder="Masukkan Password Anda" data-rule="minlen:8" data-msg="Password Minimal 8 Karakter" />
         </div>
         <div class="form-group">
-          <label for="cek_password">Re-Type Password :</label>
-          <input type="password" class="form-control" name="cek_password" id="cek_password" placeholder="Masukkan Password Anda" data-rule="minlen:8" data-msg="Password Minimal 8 Karakter" />
+          <label for="level_user">Level User :</label>
+          <select name="CBLevel_User" id="CBLevel_User">
+            <option value="0">Admin</option>
+            <option value="1">User</option>
+          </select>
         </div>
         <div class="mb-3">
           <div class="loading">Loading</div>
         </div>
         <div class="text-center">
-          <button type="submit" class="btn btn-success" onclick="validatePassword();">Register</button>
+          <button type="submit" class="btn btn-success">Tambah</button>
+          <button type="button" class="btn btn-danger" onclick="clearform();">Batal</button>
         </div>
       </form>
     </div>
     <!-- Script -->
     <script>
-        function validatePassword(){
-        document.getElementById("kata_sandi").onchange = validatePassword;
-        document.getElementById("cekpassword").onchange = validatePassword;
-        var pass2=document.getElementById("cekpassword").value;
-        var pass1=document.getElementById("kata_sandi").value;
-        if(pass1!=pass2)
-            document.getElementById("cekpassword").setCustomValidity("Passwords Tidak Sama, Coba Lagi");
-        else
-            document.getElementById("cekpassword").setCustomValidity('');
-        }
+        function clearform() {
+        document.getElementById("id_user").value = "";
+        document.getElementById("nama_user").value = "";
+        document.getElementById("username").value = "";
+        document.getElementById("kata_sandi").value = "";
+        $('#CBLevel_User')[0].selectedIndex = 0;
+      }
     </script>
   </div>
 </section>

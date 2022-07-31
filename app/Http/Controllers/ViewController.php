@@ -26,7 +26,23 @@ class ViewController extends Controller
         return view('Login');
     }
 
-    public function registrasi(){
-        return view('FormRegistrasi');
+    public function menulogin(){
+        return view('MenuViewLogin');
     }
+
+    public function variantlogin(){
+        return view('VariantMenuLogin');
+    }
+
+    public function daftartransaksilogin(){
+        return view('DaftarTransaksi');
+    }
+
+    public function aboutlogin(){
+        return view('AboutLogin');
+    }
+
+    // public function registrasi(){
+    //     return view('FormRegistrasi');
+    // }
 }
